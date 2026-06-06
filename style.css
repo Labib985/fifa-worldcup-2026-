@@ -1,0 +1,398 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+
+body{
+    background:
+    linear-gradient(
+    rgba(7,19,48,0.85),
+    rgba(7,19,48,0.90)
+    ),
+    url("Image/fifa-logo.png");
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    background-color:#071330;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+
+    background:#0b1f4d;
+}
+ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+ul li a:hover{
+    color:#FFD700;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-area img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+
+.logo-area p{
+    color:#00d9ff;
+}
+
+ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+ul li{
+    cursor:pointer;
+}
+
+ul li:hover{
+    color:#ffd700;
+}
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.8)
+    ),
+    url("Image/fifa-logo.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h3{
+    color:#00d9ff;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-top:20px;
+}
+
+.hero h2{
+    font-size:100px;
+    color:#ffd700;
+}
+
+.hero p{
+    margin-top:20px;
+    color:#ccc;
+}
+
+button{
+    margin-top:30px;
+
+    background:#ffd700;
+
+    color:black;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.1);
+    transition:0.3s;
+}
+.language-switch{
+    margin-bottom:30px;
+}
+
+.language-switch button{
+    margin:5px;
+    background:#00d9ff;
+    color:black;
+}
+.hero{
+    min-height:80vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:url("trophy.png");
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    opacity:0.3;
+
+    z-index:-1;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.countdown{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.countdown h2{
+    color:#ffd700;
+    margin-bottom:30px;
+}
+
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.box{
+    background:#0b1f4d;
+    padding:20px;
+    width:120px;
+    border-radius:15px;
+    border:1px solid #00d9ff;
+}
+
+.box span{
+    font-size:40px;
+    font-weight:bold;
+    color:#00d9ff;
+}
+
+.box p{
+    margin-top:10px;
+}
+.teams{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.teams h2{
+    color:#ffd700;
+    margin-bottom:40px;
+}
+
+.team-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.team-card{
+    width:250px;
+    background:#0b1f4d;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #00d9ff;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.team-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00d9ff;
+}
+
+.team-card h3{
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.team-card p{
+    color:#ccc;
+}
+.schedule{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.schedule h2{
+    color:#FFD700;
+    margin-bottom:40px;
+}
+
+.match-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.match-card{
+    width:320px;
+    background:#0b1f4d;
+    border:1px solid #00D9FF;
+    border-radius:15px;
+    padding:25px;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.match-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px #00D9FF;
+}
+
+.match-card h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+.match-card p{
+    color:#ccc;
+    margin:8px 0;
+}
+.search-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.search-section h2{
+    color:#FFD700;
+    margin-bottom:25px;
+}
+
+.search-box{
+    width:80%;
+    max-width:500px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:18px;
+
+    background:#0b1f4d;
+
+    color:white;
+
+    border:1px solid #00D9FF;
+}
+
+.search-box:focus{
+    box-shadow:0 0 20px #00D9FF;
+}
+footer{
+    background:#041022;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    margin-top:80px;
+}
+
+footer h3{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#ccc;
+    margin:5px 0;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+
+.hero h1{
+    font-size:90px;
+    font-weight:800;
+}
+
+.hero h2{
+    font-size:130px;
+    color:#FFD700;
+    font-weight:800;
+}
+.team-card{
+    width:260px;
+}
+.team-card{
+    width:300px;
+    min-height:160px;
+}
+.match-card{
+    width:320px;
+}
+.match-card{
+    width:350px;
+    min-height:180px;
+}
+
+

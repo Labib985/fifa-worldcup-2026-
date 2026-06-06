@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<script>
+    
+
+const targetDate =
+new Date("June 11, 2026 00:00:00").getTime();
+
+setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const distance = targetDate - now;
+
+    const days =
+    Math.floor(distance / (1000*60*60*24));
+
+    const hours =
+    Math.floor((distance%(1000*60*60*24))
+    /(1000*60*60));
+
+    const minutes =
+    Math.floor((distance%(1000*60*60))
+    /(1000*60));
+
+    const seconds =
+    Math.floor((distance%(1000*60))
+    /1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+<script>
+    
+function changeLanguage(lang){
+
+    if(lang === "bn"){
+
+        document.getElementById("powered").innerText =
+        "সেন্ট্রাল ক্লাব কমিটি কর্তৃক পরিচালিত";
+
+        document.getElementById("title").innerText =
+        "ফিফা বিশ্বকাপ";
+
+        document.getElementById("subtitle").innerText =
+        "ম্যাচ সেন্টার • লাইভ স্কোর • দল • পরিসংখ্যান";
+
+        document.getElementById("scheduleBtn").innerText =
+        "সূচি দেখুন";
+
+    }
+
+    else{
+
+        document.getElementById("powered").innerText =
+        "Powered By CCC";
+
+        document.getElementById("title").innerText =
+        "FIFA WORLD CUP";
+
+        document.getElementById("subtitle").innerText =
+        "Match Center • Live Scores • Teams • Statistics";
+
+        document.getElementById("scheduleBtn").innerText =
+        "View Schedule";
+
+    }
+
+}
+</script>
+
+
+<body>
+
+
+    <nav>
+        <div class="logo-area">
+            <img src="logo.jpg" alt="CCC Logo">
+            <div>
+                <h2>CCC</h2>
+                <p>Central Club Committee</p>
+            </div>
+        </div>
+
+        <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#teams">Teams</a></li>
+    <li><a href="#news">News</a></li>
+</ul>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <div class="language-switch">
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('bn')">বাংলা</button>
+</div>
+
+<h3 id="powered">Powered By CCC</h3>
+
+<h1 id="title">FIFA WORLD CUP</h1>
+
+<h2>2026</h2>
+
+<p id="subtitle">
+    Match Center • Live Scores • Teams • Statistics
+</p>
+
+<button id="scheduleBtn">
+    View Schedule
+</button>
+
+    </section>
+
+    <section class="countdown">
+        
+
+    <h2>World Cup Countdown</h2>
+
+    <div class="timer">
+
+        <div class="box">
+            <span id="days">0</span>
+            <p>Days</p>
+        </div>
+
+        <div class="box">
+            <span id="hours">0</span>
+            <p>Hours</p>
+        </div>
+
+        <div class="box">
+            <span id="minutes">0</span>
+            <p>Minutes</p>
+        </div>
+
+        <div class="box">
+            <span id="seconds">0</span>
+            <p>Seconds</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="teams" id="teams">
+
+    <h2>Featured Teams</h2>
+
+    <div class="team-container">
+
+        <a href="brazil.html" class="team-link">
+
+<div class="team-card">
+    <h3>🇧🇷 Brazil</h3>
+    <p>5 Times World Champion</p>
+</div>
+
+</a>
+
+        <div class="team-card">
+            <h3>🇦🇷 Argentina</h3>
+            <p>Current Champions</p>
+        </div>
+
+        <div class="team-card">
+            <h3>🇫🇷 France</h3>
+            <p>Top European Team</p>
+        </div>
+
+        <div class="team-card">
+            <h3>🇩🇪 Germany</h3>
+            <p>4 Times World Champion</p>
+        </div>
+
+        <div class="team-card">
+            <h3>🇪🇸 Spain</h3>
+            <p>2010 World Champion</p>
+        </div>
+
+        <div class="team-card">
+            <h3>🏴 England</h3>
+            <p>Football Home Nation</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="schedule" id="schedule">
+
+    <h2>Match Schedule</h2>
+
+    <div class="match-container">
+
+        <div class="match-card">
+            <h3>🇧🇷 Brazil vs 🇦🇷 Argentina</h3>
+            <p>📅 15 June 2026</p>
+            <p>🕒 8:00 PM</p>
+            <p>🏟 MetLife Stadium</p>
+        </div>
+
+        <div class="match-card">
+            <h3>🇫🇷 France vs 🇩🇪 Germany</h3>
+            <p>📅 17 June 2026</p>
+            <p>🕒 10:00 PM</p>
+            <p>🏟 SoFi Stadium</p>
+        </div>
+
+        <div class="match-card">
+            <h3>🇪🇸 Spain vs 🏴 England</h3>
+            <p>📅 20 June 2026</p>
+            <p>🕒 7:00 PM</p>
+            <p>🏟 AT&T Stadium</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="search-section">
+
+    <h2>Search Teams & Matches</h2>
+
+    <input
+        type="text"
+        placeholder="Search..."
+        class="search-box"
+    >
+
+</section>
+
+</body>
+<footer>
+
+    <h3>Central Club Committee</h3>
+
+    <p>Bazlul Huq Khan School & College</p>
+
+    <p>Dream • Create • Inspire</p>
+
+    <p>© FIFA World Cup 2026 Match Center</p>
+
+</footer>
+</html>
